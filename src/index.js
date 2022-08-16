@@ -19,16 +19,16 @@ fetch('http://localhost:3000/toys')
   .then(toys => {
     // do something with the value
     toys.forEach(toy => {
-      renderOneToy(toy)
+      renderToys(toy)
     })
   })
 
 
 //DOM render function
-function renderOneToy(toy){
+function renderToys(toy){
   //build the toy card
   // console.log(toy);
-  let card = document.createElement('div')
+  let card = document.createElement('li')
   card.className = 'card'
   card.innerHTML = `
     <h2>${toy.name}</h2>
@@ -41,6 +41,7 @@ function renderOneToy(toy){
   elementWhereToysShouldGo.appendChild(card)
 
 }
+
 
 // //Get Data and render them to the DOM
 // function initialize(){
